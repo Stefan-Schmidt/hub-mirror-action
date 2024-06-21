@@ -12,10 +12,6 @@ chmod 600 /root/.ssh/id_rsa
 
 pip3 install --break-system-packages -r /hub-mirror/requirements.txt
 
-git config --global http.version HTTP/1.1
-git config --global http.postBuffer 524288000
-git config --global core.compression 0
-
 git lfs install
 
 python3 /hub-mirror/hubmirror.py --src "${INPUT_SRC}" --dst "${INPUT_DST}" \
