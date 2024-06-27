@@ -107,6 +107,7 @@ class Hub(object):
     def _get_all_repo_names(self, url, page=1):
         per_page = 60
         api = url + f"?page={page}&per_page=" + str(per_page)
+        print("API URL used: " + api)
         # TODO: src_token support
         response = self.session.get(api)
         all_items = []
